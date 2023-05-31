@@ -1,4 +1,5 @@
 <template>
+  <main>
     <section id="scaleBusiness" class="py-[50px] container">
       <div class="grid md:grid-cols-2 items-center gap-[55px] justify-around">
         <div class="max-w-[430px]">
@@ -15,7 +16,7 @@
             company
           </p>
           <div class="flex flex-col gap-4 md:flex-row">
-            <a href="auth/sign-up.html" class="btn-primary !px-10"> Get Started </a>
+            <RouterLink :to="{ name: 'signup' }" class="btn-primary !px-10"> Get Started </RouterLink>
             <a href="#" class="border btn-white border-borderLight !px-8"> Ask Demo </a>
           </div>
         </div>
@@ -24,4 +25,5 @@
         </div>
       </div>
     </section>
+  </main>
 </template>

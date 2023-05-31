@@ -1,4 +1,5 @@
 <template>
+  <main>
     <section id="brandPartners" class="py-[50px] md:pt-[265px] md:pb-[50px] container">
       <h5 class="text-center font-bold text-[22px] leading-[27px] text-dark mb-[30px]">
         Loved by thousand big brands around the world
@@ -14,4 +15,5 @@
         <img src="@/assets/svg/logo-zoom.svg" class="h-[30px]" alt="" />
       </div>
     </section>
+  </main>
 </template>

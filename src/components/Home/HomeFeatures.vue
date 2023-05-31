@@ -1,4 +1,5 @@
 <template>
+  <main>
     <section id="features" class="py-[50px] container">
       <h2 class="text-center font-bold text-[32px] leading-[48px] text-dark mb-[40px]">
         Features That You Need <br class="desktop-only" />
@@ -86,4 +87,5 @@
         </div>
       </div>
     </section>
+  </main>
 </template>
