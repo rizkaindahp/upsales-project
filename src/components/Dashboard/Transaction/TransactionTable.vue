@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProductItem from './ProductItem.vue'
+import TransactionItem from './TransactionItem.vue'
 </script>
 
 <template>
@@ -7,13 +7,13 @@ import ProductItem from './ProductItem.vue'
     <table class="w-full" id="tableProductsUp">
       <thead>
         <th class="w-[35%]">Item Information</th>
-        <th class="w-[15%]">Status</th>
+        <th class="w-[15%]">Quantity</th>
         <th class="w-[15%]">Price</th>
-        <th class="w-[20%]">Stock</th>
+        <th class="w-[20%]">Status</th>
         <th class="">Actions</th>
       </thead>
       <tbody>
-        <ProductItem v-for="n in 10" :key="n" />
+        <TransactionItem v-for="n in 10" :key="n" />
       </tbody>
     </table>
   </div>
@@ -23,16 +23,13 @@ import ProductItem from './ProductItem.vue'
     class="mt-auto flex flex-nowrap overflow-x-auto items-center gap-[10px] w-max"
   >
     <a
+      v-for="n in 5"
+      :key="n"
+      :class="{ 'is-active': n === 1 }"
       href="#"
       class="dashboard-link bg-white !p-[13px] min-w-max w-[46px] h-[46px] text-center font-bold leading-[21px] block is-active"
     >
       1
-    </a>
-    <a
-      href="#"
-      class="dashboard-link bg-white !p-[13px] min-w-max w-[46px] h-[46px] text-center font-bold leading-[21px] block"
-    >
-      2
     </a>
   </div>
 </template>

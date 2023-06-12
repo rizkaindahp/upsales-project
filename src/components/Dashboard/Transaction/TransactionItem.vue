@@ -12,9 +12,15 @@
         <p class="mt-1 text-xs font-normal">Sneakers</p>
       </div>
     </td>
-    <td class="text-sm font-medium text-dark">Active</td>
+    <td class="text-sm font-medium text-dark">821</td>
     <td class="text-sm font-medium text-dark">$18,000</td>
-    <td class="text-sm font-medium text-dark">90,230 qty</td>
+    <td class="text-sm font-medium text-dark">
+      <div
+        class="bg-[#48DD95] px-4 py-[6px] rounded-full max-w-[72px] w-full text-center text-[10px] leading-3 font-semibold text-white"
+      >
+        Success
+      </div>
+    </td>
     <td>
       <div class="flex items-center gap-3">
         <!-- Edit -->

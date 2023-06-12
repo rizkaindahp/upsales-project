@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useSidebarStore } from '@/stores/sidebar'
+import { defineProps } from 'vue'
+
+const sidebarStore = useSidebarStore()
 const props = defineProps<{
   isDashboard?: boolean
 }>()
@@ -8,7 +12,12 @@ const props = defineProps<{
   <!-- START: Top Bar -->
   <nav class="flex items-center lg:justify-between mb-[30px] gap-4">
     <!-- Mobile Sidebar Toggler -->
-    <a href="javascript:void(0)" class="w-6 h-6 mobile-tablet" id="navbarTogglerHead">
+    <a
+      href="javascript:void(0)"
+      class="w-6 h-6 mobile-tablet"
+      id="navbarTogglerHead"
+      @click="sidebarStore.toggle()"
+    >
       <img src="@/assets/svg/ic-hamburger.svg" class="invert" alt="" />
     </a>
     <header class="text-dark" v-if="props.isDashboard">
@@ -23,7 +32,7 @@ const props = defineProps<{
       class="desktop-tablet"
       :class="isDashboard ? 'w-full max-w-[270px]' : 'w-[60%] max-w-[550px]'"
     >
-      <input 
+      <input
         type="text"
         name="search"
         placeholder="Search report..."
@@ -53,10 +62,11 @@ const props = defineProps<{
         href="#"
         class="group transition-all relative rounded-full border-2 border-borderLight bg-white hover:bg-dark p-[13px] text-dark hover:text-white min-w-max hidden md:block"
       >
-        <!-- <span
-                            class="bg-primary rounded-full text-white font-bold text-[11px] absolute top-0 -right-1 p-[5px] h-5 w-5 min-w-max text-center leading-3">
-                            12
-                        </span> -->
+        <span
+          class="bg-primary rounded-full text-white font-bold text-[11px] absolute top-0 -right-1 p-[5px] h-5 w-5 min-w-max text-center leading-3"
+        >
+          12
+        </span>
         <img
           src="@/assets/svg/ic-message.svg"
           class="w-6 h-6 transition-all group-hover:filter-white"
